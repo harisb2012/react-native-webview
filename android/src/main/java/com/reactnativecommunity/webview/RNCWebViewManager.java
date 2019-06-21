@@ -466,7 +466,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       "goBack", COMMAND_GO_BACK,
       "goForward", COMMAND_GO_FORWARD,
       "reload", COMMAND_RELOAD,
-      "stopLoading", COMMAND_STOP_LOADING,
+//      "stopLoading", COMMAND_STOP_LOADING,
       "postMessage", COMMAND_POST_MESSAGE,
       "injectJavaScript", COMMAND_INJECT_JAVASCRIPT,
       "loadUrl", COMMAND_LOAD_URL,
