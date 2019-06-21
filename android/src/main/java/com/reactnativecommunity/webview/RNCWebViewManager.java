@@ -105,6 +105,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
   public static final int COMMAND_POST_MESSAGE = 5;
   public static final int COMMAND_INJECT_JAVASCRIPT = 6;
   public static final int COMMAND_LOAD_URL = 7;
+  public static final int COMMAND_REQUEST_FOCUS = 8;
   protected static final String REACT_CLASS = "RNCWebView";
   protected static final String HTML_ENCODING = "UTF-8";
   protected static final String HTML_MIME_TYPE = "text/html";
@@ -468,13 +469,17 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       "stopLoading", COMMAND_STOP_LOADING,
       "postMessage", COMMAND_POST_MESSAGE,
       "injectJavaScript", COMMAND_INJECT_JAVASCRIPT,
-      "loadUrl", COMMAND_LOAD_URL
+      "loadUrl", COMMAND_LOAD_URL,
+      "requestFocus", COMMAND_REQUEST_FOCUS
     );
   }
 
   @Override
   public void receiveCommand(WebView root, int commandId, @Nullable ReadableArray args) {
     switch (commandId) {
+      case COMMAND_REQUEST_FOCUS:
+        root.requestFocus();
+        break;
       case COMMAND_GO_BACK:
         root.goBack();
         break;
