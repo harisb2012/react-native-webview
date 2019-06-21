@@ -466,7 +466,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
   Map<String, Integer> getCommandsMap() {
     return MapBuilder.of(
       "goBack", COMMAND_GO_BACK,
-      "goForward", COMMAND_GO_FORWARD,
+      // "goForward", COMMAND_GO_FORWARD,
       "reload", COMMAND_RELOAD,
       "stopLoading", COMMAND_STOP_LOADING,
       "postMessage", COMMAND_POST_MESSAGE,
